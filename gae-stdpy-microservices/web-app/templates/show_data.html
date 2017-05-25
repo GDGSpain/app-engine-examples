@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+<title>Show data</title>
+{% endblock %}
+
+
+{% block content %}
+<h2>Show data</h2>
+
+<p>Data:</p>
+<ul>
+{% for d in data %}
+	<li>
+		<ul>
+			<li>Device ID: {{d['device_id']}}</li>
+			<li>Data value: {{d['value']}}</li>
+			<li>Timestamp: {{d['generated']}}</li>
+		</ul>
+	</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
